@@ -1,5 +1,5 @@
 ﻿
-Console.Write("input number")
+Console.Write("input number");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = int.Parse(Console.ReadLine()!);
 int sqr1 = num1*num1;
