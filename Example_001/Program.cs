@@ -1,4 +1,4 @@
-﻿
+﻿Console.Clear();
 Console.Write("input number:");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = int.Parse(Console.ReadLine()!);
