@@ -56,11 +56,12 @@ WriteLine(comparison);
 // а на выходе показывает все чётные числа от 1 до N
 // use num1
 
-comparison = $"row evens until {num1} ";
+comparison = $"row evens until {num1} => ";
 int i=0;
-while(i < num1){
+while(i <= num1){
+    if(i != 0){
+    comparison += $"{i}, ";}
     i += 2;
-    comparison += "i, ";
 }
 
 WriteLine("");
