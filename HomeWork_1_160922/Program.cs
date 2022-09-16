@@ -21,3 +21,18 @@ else if(num1==num2){
     comparison = $"both nambers ( {num1} ) are equal";
 }
 Write(comparison);
+
+//Задача 4: Напишите программу, которая принимает 
+//на вход три числа и выдаёт максимальное из этих чисел.
+//use num1, num2, num3
+
+comparison = $"maxiimum number from set ({num1}, {num2}, {num3}) third - {num3} ";
+if(num1>=num2 & num1>=num3){
+    comparison = $"maxiimum number from set ({num1}, {num2}, {num3}) first - {num1} ";
+}
+else if(num2 >= num1 & num2 >= num3){
+    comparison = $"maxiimum number from set ({num1}, {num2}, {num3}) second - {num2} ";
+}
+Write(comparison);
+
+
