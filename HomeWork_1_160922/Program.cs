@@ -20,7 +20,9 @@ if(num1 < num2){
 else if(num1==num2){
     comparison = $"both nambers ( {num1} ) are equal";
 }
-Write(comparison);
+WriteLine("");
+WriteLine("task2");
+WriteLine(comparison);
 
 //Задача 4: Напишите программу, которая принимает 
 //на вход три числа и выдаёт максимальное из этих чисел.
@@ -33,6 +35,8 @@ if(num1>=num2 & num1>=num3){
 else if(num2 >= num1 & num2 >= num3){
     comparison = $"maxiimum number from set ({num1}, {num2}, {num3}) second - {num2} ";
 }
-Write(comparison);
+WriteLine("");
+WriteLine("task4");
+WriteLine(comparison);
 
 
