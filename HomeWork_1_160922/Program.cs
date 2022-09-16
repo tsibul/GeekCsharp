@@ -39,4 +39,16 @@ WriteLine("");
 WriteLine("task4");
 WriteLine(comparison);
 
+//Задача 6: Напишите программу, которая на вход принимает число и выдаёт, 
+//является ли число чётным (делится ли оно на два без остатка).
+// use num1
+
+comparison = $"number {num1} is even";
+if(mum1%2 !=0){
+    comparison = $"number {num1} is odd";    
+}
+
+WriteLine("");
+WriteLine("task6");
+WriteLine(comparison);
 
