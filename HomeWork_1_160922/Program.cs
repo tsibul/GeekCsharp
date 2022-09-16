@@ -44,7 +44,7 @@ WriteLine(comparison);
 // use num1
 
 comparison = $"number {num1} is even";
-if(mum1%2 !=0){
+if(num1%2 !=0){
     comparison = $"number {num1} is odd";    
 }
 
