@@ -54,6 +54,28 @@ double distance = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y1),2) + Math.Pow
 WriteLine("");
 WriteLine($"distance between ({x1},{y1},{z1}) and ({x2},{y2},{z2}) = {distance:f2}");
 
+WriteLine("");
 
+// Задача 23
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
 
+Write("input N :");
+int num = Convert.ToInt32(ReadLine());
+
+i = 0;
+string pow3 = "";
+int [] pw3 = new int[num];
+while(i < num){
+    i++;
+    int pw_3 = i*i*i;
+    pow3 += Convert.ToString(pw_3) + ", ";
+    pw3 [i-1] = pw_3;
+}
+WriteLine(pow3);
+foreach(var item in pw3)
+{
+    Console.Write(item.ToString() + " ");
+};
 
