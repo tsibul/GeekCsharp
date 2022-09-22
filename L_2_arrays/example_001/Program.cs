@@ -36,7 +36,7 @@ Clear();
 WriteLine("first point");
 Write("input x1 :");
 double x1 = Convert.ToDouble(ReadLine());
-Write("input y1 :");s
+Write("input y1 :");
 double y1 = Convert.ToDouble(ReadLine());
 WriteLine("");
 WriteLine("second point");
@@ -45,4 +45,4 @@ double x2 = Convert.ToDouble(ReadLine());
 Write("input y2 :");
 double y2 = Convert.ToDouble(ReadLine());
 double result = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y1),2));
-WriteLine($"distance between ({x1},{y1}) and ({x2},{y2}) = {result}");
+WriteLine($"distance between ({x1},{y1}) and ({x2},{y2}) = {result:f4}");
