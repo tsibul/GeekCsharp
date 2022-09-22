@@ -26,3 +26,34 @@ if(num5 == num5_reverse){
     result = "Yes";
 }
 WriteLine(result);
+WriteLine("");
+
+// Задача 21
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+// !!!! если первое число не 5-значное сюда не дойдет из-за return
+WriteLine("first point");
+Write("input x1 :");
+double x1 = Convert.ToDouble(ReadLine());
+Write("input y1 :");
+double y1 = Convert.ToDouble(ReadLine());
+Write("input z1 :");
+double z1 = Convert.ToDouble(ReadLine());
+WriteLine("");
+WriteLine("second point");
+Write("input x2 :");
+double x2 = Convert.ToDouble(ReadLine());
+Write("input y2 :");
+double y2 = Convert.ToDouble(ReadLine());
+Write("input z2 :");
+double z2 = Convert.ToDouble(ReadLine());
+double distance = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y1),2) + Math.Pow((z2-z1),2));
+WriteLine("");
+WriteLine($"distance between ({x1},{y1},{z1}) and ({x2},{y2},{z2}) = {distance:f2}");
+
+
+
+
