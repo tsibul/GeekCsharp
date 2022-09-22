@@ -64,14 +64,16 @@ WriteLine("");
 Write("input N :");
 int num = Convert.ToInt32(ReadLine());
 
-i = 0;
-string pow3 = "";
+i = 1;
+string pow3 = "1";
 int [] pw3 = new int[num];
+pw3 [0] = 1;
 while(i < num){
     i++;
     int pw_3 = i*i*i;
-    pow3 += Convert.ToString(pw_3) + ", ";
+    pow3 += ", " + Convert.ToString(pw_3);
     pw3 [i-1] = pw_3;
+
 }
 WriteLine(pow3);
 foreach(var item in pw3)
