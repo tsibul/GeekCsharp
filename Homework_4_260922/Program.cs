@@ -1,11 +1,21 @@
 ﻿using static System.Console;
 Clear();
 
-Write ("input A : ");
-int A = Convert.ToInt32(ReadLine()!);
-Write ("input B : ");
-int B = Convert.ToInt32(ReadLine()!);
-WriteLine($"{A}^{B}={GetNaturalPower(A, B)}");
+//Task 25
+
+// Write ("input A : ");
+// int A = Convert.ToInt32(ReadLine()!);
+// Write ("input B : ");
+// int B = Convert.ToInt32(ReadLine()!);
+// WriteLine($"{A}^{B}={GetNaturalPower(A, B)}");
+
+//Task 27
+
+Write ("input number : ");
+int numb1 = Convert.ToInt32(ReadLine()!);
+WriteLine($"Sum of digits {numb1} = {GetSumDigits(numb1)}");
+
+
 
 
 //Methods
@@ -32,6 +42,15 @@ int GetNaturalPower(int num1, int num2){
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
+
+int GetSumDigits(int number){
+    int result = 0;
+    while(number>0){
+        result += number%10;
+        number /= 10;
+    }
+    return result;
+}
 
 // Задача 29: Напишите метод, который формирует массив из 8 случайных элементов и выводит их на экран.
 // 1, 2, 5, 7, 19,6, 1, 33 -> [1, 2, 5, 7, 19,6, 1, 33]
