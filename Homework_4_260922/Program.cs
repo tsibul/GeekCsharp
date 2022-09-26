@@ -16,12 +16,22 @@ Clear();
 // WriteLine($"Sum of digits {numb1} = {GetSumDigits(numb1)}");
 
 // Task 29
+// Write ("input length of array : ");
+// int length = Convert.ToInt32(ReadLine()!);
+// Write ("input number of digits in array element : ");
+// int digits = Convert.ToInt32(ReadLine()!);
+// int[] arr = GetRandomArray(length, digits);
+// PrintArray(arr);
+
+//longest set of sertain digits in Binary array
 Write ("input length of array : ");
 int length = Convert.ToInt32(ReadLine()!);
-Write ("input number of digits in array element : ");
-int digits = Convert.ToInt32(ReadLine()!);
-int[] arr = GetRandomArray(length, digits);
+int[] arr = GetBinaryArray(length);
 PrintArray(arr);
+Write ("input lookup in array : ");
+int lookup = Convert.ToInt32(ReadLine()!);
+WriteLine($"longest set of {lookup} is {CountSets(arr, lookup)}");
+
 
 
 //Methods
@@ -70,11 +80,6 @@ int[] GetRandomArray(int len, int numdigits){
     return result;
 }
 
-
-
-
-
-
 void PrintArray (int[] inarray){
     Write("[");
     for(int i = 0; i < inarray.Length - 1; i++){
@@ -82,3 +87,37 @@ void PrintArray (int[] inarray){
     }
     Write($"{inarray[inarray.Length - 1]}]");
 }
+
+
+
+//longest set of sertain digits in Binary array
+int[] GetBinaryArray(int len){
+    int [] result = new int [len];
+    for(int i = 0; i < len; i++){
+        result[i] = new Random().Next(0,2);
+    }
+
+    return result;
+}
+int CountSets (int[] inarray, int number){
+    int result = 0;
+    for(int i = 0; i < inarray.Length; i++){
+        if( inarray[i] == number){
+            int tmp_result = 0;
+            int j = i;
+            while(inarray[j] == number && j < inarray.Length - 1){
+                tmp_result++;
+                j++;
+            }
+            if(result < tmp_result){
+                result = tmp_result;
+            }
+        }
+    }
+    return result;
+}
+
+
+
+
+
