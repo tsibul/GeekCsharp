@@ -11,11 +11,17 @@ Clear();
 
 //Task 27
 
-Write ("input number : ");
-int numb1 = Convert.ToInt32(ReadLine()!);
-WriteLine($"Sum of digits {numb1} = {GetSumDigits(numb1)}");
+// Write ("input number : ");
+// int numb1 = Convert.ToInt32(ReadLine()!);
+// WriteLine($"Sum of digits {numb1} = {GetSumDigits(numb1)}");
 
-
+// Task 29
+Write ("input length of array : ");
+int length = Convert.ToInt32(ReadLine()!);
+Write ("input number of digits in array element : ");
+int digits = Convert.ToInt32(ReadLine()!);
+int[] arr = GetRandomArray(length, digits);
+PrintArray(arr);
 
 
 //Methods
@@ -54,3 +60,25 @@ int GetSumDigits(int number){
 
 // Задача 29: Напишите метод, который формирует массив из 8 случайных элементов и выводит их на экран.
 // 1, 2, 5, 7, 19,6, 1, 33 -> [1, 2, 5, 7, 19,6, 1, 33]
+
+int[] GetRandomArray(int len, int numdigits){
+    int [] result = new int [len];
+    for(int i = 0; i < len; i++){
+        result[i] = new Random().Next(0,GetNaturalPower(10,numdigits));
+    }
+
+    return result;
+}
+
+
+
+
+
+
+void PrintArray (int[] inarray){
+    Write("[");
+    for(int i = 0; i < inarray.Length - 1; i++){
+        Write($"{inarray[i]}, ");        
+    }
+    Write($"{inarray[inarray.Length - 1]}]");
+}
