@@ -5,8 +5,8 @@ Clear();
 // которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-//int [] arr = PrepareArray();
-//WriteLine($"number of evens - {GetEvens(arr)}");
+int [] arr = PrepareArray();
+WriteLine($"number of evens - {GetEvens(arr)}");
 
 
 
@@ -15,7 +15,7 @@ Clear();
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-//WriteLine($"sum of even places (odd indexes) - {SumOfEvenIndexes(arr)}");
+WriteLine($"sum of even places (odd indexes) - {SumOfEvenIndexes(arr)}");
 
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
