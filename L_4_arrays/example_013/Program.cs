@@ -17,11 +17,11 @@ int maximal = Convert.ToInt32(ReadLine()!);
 int [] arr = GetArray(len, minimal, maximal);
 WriteLine($"[{String.Join(", ", arr)}]");
 
-Write(" diapason starts: ");
-int start = Convert.ToInt32(ReadLine()!);
-Write(" diapason end: ");
-int end = Convert.ToInt32(ReadLine()!);
-WriteLine($"between {start} and {end} = {LookFor(arr, start, end)} ");
+// Write(" diapason starts: ");
+// int start = Convert.ToInt32(ReadLine()!);
+// Write(" diapason end: ");
+// int end = Convert.ToInt32(ReadLine()!);
+// WriteLine($"between {start} and {end} = {LookFor(arr, start, end)} ");
 
 
 
@@ -30,8 +30,8 @@ WriteLine($"between {start} and {end} = {LookFor(arr, start, end)} ");
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-//int [] res = MultElement(arr);
-//WriteLine($"[{String.Join(", ", res)}]");
+int [] res = MultElement(arr);
+WriteLine($"[{String.Join(", ", res)}]");
 
 
 
