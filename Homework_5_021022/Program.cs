@@ -6,7 +6,7 @@ Clear();
 // [345, 897, 568, 234] -> 2
 
 int [] arr = PrepareArray();
-WriteLine($"number of evens - {GetEvens(arr)}");
+//WriteLine($"number of evens - {GetEvens(arr)}");
 
 
 
@@ -15,6 +15,7 @@ WriteLine($"number of evens - {GetEvens(arr)}");
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
+WriteLine($"sum of even places (odd indexes) - {SumOfEvenIndexes(arr)}");
 
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
@@ -24,6 +25,16 @@ WriteLine($"number of evens - {GetEvens(arr)}");
 
 
 // Methods
+int SumOfEvenIndexes(int [] arr){
+    int res = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i%2 == 1) res += arr[i];
+    }
+    return res;
+}
+
+
 int GetEvens(int [] arr){
     int res = 0;
     foreach (var item in arr)
