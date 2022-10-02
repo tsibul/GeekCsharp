@@ -5,7 +5,7 @@ Clear();
 // которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int [] arr = PrepareArray();
+//int [] arr = PrepareArray();
 //WriteLine($"number of evens - {GetEvens(arr)}");
 
 
@@ -15,16 +15,58 @@ int [] arr = PrepareArray();
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-WriteLine($"sum of even places (odd indexes) - {SumOfEvenIndexes(arr)}");
+//WriteLine($"sum of even places (odd indexes) - {SumOfEvenIndexes(arr)}");
 
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
+double [] arr = PrepareDArray();
+WriteLine($"difference between min & max - {DeltaMinMax(arr)}");
+
 
 
 
 // Methods
+double DeltaMinMax(double[] arr){
+    double Max = arr[1];
+    double Min = arr[1];
+    foreach (var item in arr)
+    {
+        if(Max < item) Max = item;
+        if(Min > item) Min = item;
+    }
+    return Max - Min; 
+}
+
+
+double [] PrepareDArray(){
+    Write(" array size: ");
+    int len = Convert.ToInt32(ReadLine()!);
+    Write(" array min: ");
+    int minimal = Convert.ToInt32(ReadLine()!);
+    Write(" array max: ");
+    int maximal = Convert.ToInt32(ReadLine()!);
+    double [] arr = GetDArray(len, minimal, maximal);
+    WriteLine($"[{String.Join(", ", arr)}]");
+    return arr;
+} 
+
+double [] GetDArray(int size, int minValue, int maxValue)
+{
+    Random rnd = new Random();
+    int dif = maxValue - minValue;
+    double [] result = new double [size];
+    for (int i = 0; i < result.Length; i++)
+    {
+        result[i] = minValue + dif*rnd.NextDouble();
+    }
+    return result;
+}
+
+
+
+
 int SumOfEvenIndexes(int [] arr){
     int res = 0;
     for (int i = 0; i < arr.Length; i++)
