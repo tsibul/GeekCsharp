@@ -23,7 +23,7 @@ public class MyMethods
         return arr;
 
     }
-    int[] ReverseArrayToNew(int[] array)
+    public static int[] ReverseArrayToNew(int[] array)
     {
         int[] result = new int[array.Length];
         for (int i = 0; i < array.Length; i++)
@@ -33,7 +33,7 @@ public class MyMethods
         return result;
     }
 
-    void ReverseArraySelf(int[] array)
+    public static void ReverseArraySelf(int[] array)
     {
         for (int i = 0; i < array.Length / 2; i++)
         {
@@ -43,7 +43,7 @@ public class MyMethods
         }
     }
 
-    int[] GetArrayFromString(string parameters)
+    public static int[] GetArrayFromString(string parameters)
     {
         string[] parames = parameters.Split(" ", StringSplitOptions.RemoveEmptyEntries);
         int[] parameterNum = new int[parames.Length];
@@ -53,7 +53,7 @@ public class MyMethods
         }
         return parameterNum;
     }
-    void PrintMatrix(int[,] inMatrix)
+    public static void PrintMatrix(int[,] inMatrix)
     {
         for (int i = 0; i < inMatrix.GetLength(0); i++)
         {
@@ -64,7 +64,7 @@ public class MyMethods
             WriteLine();
         }
     }
-    int[,] GetMatrixArray(int rows, int columns, int minValue, int maxValue)
+    public static int[,] GetMatrixArray(int rows, int columns, int minValue, int maxValue)
     {
         int[,] resultMatrix = new int[rows, columns];
         for (int i = 0; i < resultMatrix.GetLength(0); i++)
