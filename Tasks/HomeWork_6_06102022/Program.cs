@@ -7,31 +7,27 @@ Clear();
 // 1, -7, 567, 89, 223-> 3
 
 CountPositive();
+//метод не очень нужен тут
 
 void CountPositive()
 {
-int count = 0;
-bool operate = true;
-while (operate){ }
-    Write("Input number if you want to continue or anykey to stop: ");
-    string input = (ReadLine());
-    if (int.TryParse(input, number){
-        if (number > 0) count++;
+    int count = 0;
+    bool operate = true;
+    int number;
+    while (operate)
+    {
+        Write("Input number if you want to continue or anykey to stop: ");
+        string input = (ReadLine());
+        if (int.TryParse(input, out number))
+        {
+            if (number > 0) count++;
+        }
+        else operate = false;
     }
-    else operate = false;
     WriteLine($"Positive numbers = {count}");
-while (ReadKey().Key==ConsoleKey.Enter);
 }
 
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
 //заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-int count = 0;
-do
-{
-    Write("Input number: ");
-    if (int.Parse(ReadLine()!) > 0) count++;
-    WriteLine($"Positive numbers = {count}");
-    WriteLine("Continue? Yes - enter, No - any key");
-} while (ReadKey().Key == ConsoleKey.Enter);
