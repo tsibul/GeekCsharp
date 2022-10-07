@@ -53,17 +53,7 @@ public class MyMethods
         }
         return parameterNum;
     }
-    public static void PrintMatrix(int[,] inMatrix)
-    {
-        for (int i = 0; i < inMatrix.GetLength(0); i++)
-        {
-            for (int j = 0; j < inMatrix.GetLength(1); j++)
-            {
-                Write($"{inMatrix[i, j]} ");
-            }
-            WriteLine();
-        }
-    }
+
     public static int[,] GetMatrixArray(int rows, int columns, int minValue, int maxValue)
     {
         int[,] resultMatrix = new int[rows, columns];
@@ -77,6 +67,40 @@ public class MyMethods
         return resultMatrix;
     }
 
+    public static double[,] GetDoubleMatrixArray(int rows, int columns, int minValue, int maxValue)
+    {
+        double[,] resultMatrix = new double[rows, columns];
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                resultMatrix[i, j] = minValue + new Random().NextDouble() * (maxValue + 1 - minValue);
+            }
+        }
+        return resultMatrix;
+    }
+    public static void PrintMatrix(int[,] inMatrix)
+    {
+        for (int i = 0; i < inMatrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < inMatrix.GetLength(1); j++)
+            {
+                Write($"{inMatrix[i, j]}\t");
+            }
+            WriteLine();
+        }
+    }
+    public static void PrintMatrix(double[,] inMatrix)
+    {
+        for (int i = 0; i < inMatrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < inMatrix.GetLength(1); j++)
+            {
+                Write($"{inMatrix[i, j]}\t");
+            }
+            WriteLine();
+        }
+    }
 
 
 }
