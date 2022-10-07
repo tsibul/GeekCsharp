@@ -79,6 +79,26 @@ public class MyMethods
         }
         return resultMatrix;
     }
+    public static void PrintMatrix(int[] inMatrix)
+    {
+
+        for (int j = 0; j < inMatrix.Length; j++)
+        {
+            Write($"{inMatrix[j]}\t");
+        }
+
+    }
+
+    public static void PrintMatrix(double[] inMatrix)
+    {
+
+        for (int j = 0; j < inMatrix.Length; j++)
+        {
+            Write($"{inMatrix[j]}\t");
+        }
+
+    }
+
     public static void PrintMatrix(int[,] inMatrix)
     {
         for (int i = 0; i < inMatrix.GetLength(0); i++)
