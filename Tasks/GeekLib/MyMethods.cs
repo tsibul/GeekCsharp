@@ -102,5 +102,16 @@ public class MyMethods
         }
     }
 
+    public static bool IfIndexInArray(int[] array, int index)
+    {
+        return (index < array.Length && index >= 0);
+    }
+
+    public static bool IfIndexInArray(int[,] array, int row, int column)
+    {
+        return (row < array.GetLength(0) && row >= 0 &&
+                column < array.GetLength(1) && column >= 0);
+    }
+
 
 }
