@@ -44,9 +44,53 @@ WriteLine();
 // 5 2 6 7
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-MinSumOfRowElements(array);
+//MinSumOfRowElements(array);
+
+// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
+
+Write("for second matrix input rows, columns, minValue, maxValue split by space: ");
+prms = ReadLine();
+input = MyMethods.GetArrayFromString(prms);
+int[,] array2 = MyMethods.GetMatrixArray(input[0], input[1], input[2], input[3]);
+MyMethods.PrintMatrix(array2);
+WriteLine();
+int[,] newarray = MatrixMultiplication(array, array2);
+MyMethods.PrintMatrix(newarray);
+
 
 //Methods
+int[,] MatrixMultiplication(int[,] arr, int[,] arr2)
+{
+    if (arr.GetLength(1) != arr2.GetLength(0))
+    {
+        WriteLine("imposible");
+        int[,] err = new int[1, 1];
+        return err;
+    }
+    int rows = arr.GetLength(0);
+    int columns = arr2.GetLength(1);
+    int intermediate = arr.GetLength(1);
+    int[,] newarr = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            for (int r = 0; r < intermediate; r++)
+            {
+                newarr[i, j] += arr[i, r] * arr2[r, j];
+            }
+        }
+    }
+    return newarr;
+}
+
+
 void MinSumOfRowElements(int[,] arr)
 {
     int minimumsum = 0;
