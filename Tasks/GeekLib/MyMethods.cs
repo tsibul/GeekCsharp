@@ -133,5 +133,17 @@ public class MyMethods
                 column < array.GetLength(1) && column >= 0);
     }
 
+    public static int[] RowFromMatrix(int[,] arr, int rownumber)
+    {
+        int[] newarr = new int[arr.GetLength(1)];
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            newarr[i] = arr[rownumber, i];
+        }
+        return newarr;
+    }
+
 
 }
+
+
