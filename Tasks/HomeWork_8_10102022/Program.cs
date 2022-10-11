@@ -25,6 +25,7 @@ WriteLine();
 SortRowElements(array);
 WriteLine("sorting rows");
 MyMethods.PrintMatrix(array);
+WriteLine();
 
 // Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет 
 // находить строку с наименьшей суммой элементов.
@@ -35,7 +36,10 @@ MyMethods.PrintMatrix(array);
 // 5 2 6 7
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-//MinSumOfRowElements(array);
+WriteLine("row with minimum sum");
+MinSumOfRowElements(array);
+WriteLine();
+
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 // Например, даны 2 матрицы:
