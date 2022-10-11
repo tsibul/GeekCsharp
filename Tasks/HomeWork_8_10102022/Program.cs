@@ -16,9 +16,10 @@ Clear();
 Write("input rows, columns, minValue, maxValue split by space: ");
 string prms = ReadLine();
 int[] input = MyMethods.GetArrayFromString(prms);
-int[,] array = MyMethods.GetMatrixArray(input[0], input[1], input[2], input[3]);
-MyMethods.PrintMatrix(array);
-WriteLine();
+
+// int[,] array = MyMethods.GetMatrixArray(input[0], input[1], input[2], input[3]);
+// MyMethods.PrintMatrix(array);
+// WriteLine();
 
 // Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит
 // по убыванию элементы каждой строки двумерного массива.
@@ -54,17 +55,64 @@ WriteLine();
 // 18 20
 // 15 18
 
-Write("for second matrix input rows, columns, minValue, maxValue split by space: ");
-prms = ReadLine();
-input = MyMethods.GetArrayFromString(prms);
-int[,] array2 = MyMethods.GetMatrixArray(input[0], input[1], input[2], input[3]);
-MyMethods.PrintMatrix(array2);
+// Write("for second matrix input rows, columns, minValue, maxValue split by space: ");
+// prms = ReadLine();
+// input = MyMethods.GetArrayFromString(prms);
+// int[,] array2 = MyMethods.GetMatrixArray(input[0], input[1], input[2], input[3]);
+// MyMethods.PrintMatrix(array2);
+// WriteLine();
+// int[,] newarray = MatrixMultiplication(array, array2);
+// MyMethods.PrintMatrix(newarray);
+
+
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
+
+
+int [] linearray = new int [input[0]*input[1]*input[2]];
+linearray = MyMethods.NotRepeatRandomArray(linearray.Length, input[3], input[4]);
+MyMethods.PrintMatrix(linearray);
 WriteLine();
-int[,] newarray = MatrixMultiplication(array, array2);
-MyMethods.PrintMatrix(newarray);
+WriteLine();
+
+int [,,] newarray = Get3DArrayFromLine(linearray, input[0], input[1] ,input[2]);
+
 
 
 //Methods
+
+int [,,] Get3DArrayFromLine(int [] linearr, int rows, int columns, int depth){
+    if(linearr.Length != rows*columns*depth){
+        WriteLine("incorrect dimensions");
+        int [,,] err = new int [1,1,1];
+        return err;
+    }
+    int [,,] newarr = new int [rows, columns, depth];
+    int l = 0;
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            for (int k = 0; k < depth; k++)
+            {
+               newarr[i, j ,k] = linearr[l];
+               Write($"{newarr[i, j ,k]} ({i}, {j}, {k})\t");
+               l++; 
+            }
+            WriteLine();
+        }
+            WriteLine($"layer {i+1} ↑");
+        
+    }
+    return newarr;
+}
+
+
 int[,] MatrixMultiplication(int[,] arr, int[,] arr2)
 {
     if (arr.GetLength(1) != arr2.GetLength(0))

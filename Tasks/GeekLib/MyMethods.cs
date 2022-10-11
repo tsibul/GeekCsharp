@@ -143,6 +143,32 @@ public class MyMethods
         return newarr;
     }
 
+    public static int[] NotRepeatRandomArray(int size, int minValue, int maxValue)
+    {
+        if (maxValue - minValue + 1 < size)
+        {
+            WriteLine("to small range for not repeated randoms");
+            int[] err = new int[1];
+            return err;
+        }
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++)
+        {
+            arr[i] = maxValue + 2;
+        }
+        int rnd;
+        for (int i = 0; i < size; i++)
+        {
+            do
+            {
+                rnd = new Random().Next(minValue, maxValue + 1);
+            } while (Array.Exists(arr, element => element == rnd));
+            arr[i] = rnd;
+        }
+        return arr;
+    }
+
+
 
 }
 
