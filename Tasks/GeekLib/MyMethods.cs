@@ -13,7 +13,6 @@ public class MyMethods
         }
         return result;
     }
-
     public static int[] PrepareRandomArray()
     {
         Write("input array size, minValue, maxValue splited with spaces: ");
@@ -32,7 +31,6 @@ public class MyMethods
         }
         return result;
     }
-
     public static void ReverseArraySelf(int[] array)
     {
         for (int i = 0; i < array.Length / 2; i++)
@@ -42,7 +40,6 @@ public class MyMethods
             array[array.Length - 1 - i] = temp;
         }
     }
-
     public static int[] GetArrayFromString(string parameters)
     {
         string[] parames = parameters.Split(" ", StringSplitOptions.RemoveEmptyEntries);
@@ -53,7 +50,6 @@ public class MyMethods
         }
         return parameterNum;
     }
-
     public static int[,] GetMatrixArray(int rows, int columns, int minValue, int maxValue)
     {
         int[,] resultMatrix = new int[rows, columns];
@@ -66,7 +62,6 @@ public class MyMethods
         }
         return resultMatrix;
     }
-
     public static double[,] GetDoubleMatrixArray(int rows, int columns, int minValue, int maxValue)
     {
         double[,] resultMatrix = new double[rows, columns];
@@ -88,7 +83,6 @@ public class MyMethods
         }
 
     }
-
     public static void PrintMatrix(double[] inMatrix)
     {
 
@@ -98,7 +92,6 @@ public class MyMethods
         }
 
     }
-
     public static void PrintMatrix(int[,] inMatrix)
     {
         for (int i = 0; i < inMatrix.GetLength(0); i++)
@@ -121,18 +114,15 @@ public class MyMethods
             WriteLine();
         }
     }
-
     public static bool IfIndexInArray(int[] array, int index)
     {
         return (index < array.Length && index >= 0);
     }
-
     public static bool IfIndexInArray(int[,] array, int row, int column)
     {
         return (row < array.GetLength(0) && row >= 0 &&
                 column < array.GetLength(1) && column >= 0);
     }
-
     public static int[] RowFromMatrix(int[,] arr, int rownumber)
     {
         int[] newarr = new int[arr.GetLength(1)];
@@ -142,7 +132,6 @@ public class MyMethods
         }
         return newarr;
     }
-
     public static int[] NotRepeatRandomArray(int size, int minValue, int maxValue)
     {
         if (maxValue - minValue + 1 < size)
@@ -167,9 +156,6 @@ public class MyMethods
         }
         return arr;
     }
-
-
-
 }
 
 
