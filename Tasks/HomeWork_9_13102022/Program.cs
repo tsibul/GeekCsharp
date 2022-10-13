@@ -9,6 +9,8 @@ Clear();
 Write("input N: ");
 int number = Convert.ToInt32(ReadLine()!);
 WriteLine(GetNumbersDecrement(number));
+WriteLine();
+
 
 string GetNumbersDecrement(int n)
 {
@@ -16,12 +18,21 @@ string GetNumbersDecrement(int n)
 }
 
 
-
-
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт
 //  сумму натуральных элементов в промежутке от M до N.
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
+
+Write("input M: ");
+int mumber = Convert.ToInt32(ReadLine()!);
+WriteLine($"Sum from {number} to {mumber} => {GetSunNToM(number, mumber)}");
+
+int GetSunNToM(int n, int m)
+{
+    if (n == m) return n;
+     return (n > m) ? GetSunNToM(n - 1, m)  + n : GetSunNToM(m - 1, n) + m;
+}
+
 
 // Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 9
