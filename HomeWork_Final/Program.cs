@@ -26,6 +26,7 @@ string [] CutArray(string [] inputArray, int cutParametr)
         if(inputArray[i].Length <= cutParametr) j++;
     }
     string [] outArray = new string [j];
+ // Если бы не надо было делать новый массив  в этом цикле бы все и выывел   
 
     j = 0;
     for (int i = 0; i < inputArray.Length; i++)    
