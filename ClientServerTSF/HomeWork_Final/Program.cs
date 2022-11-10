@@ -10,6 +10,7 @@ string [] startArray = CreateRandomStringArray(elLength, arLength);
 Write($"input array [{String.Join(", ", startArray)}]");
 
 
+
 string [] CreateRandomStringArray(int elementLength, int arrayLength)
 {
     string [] stringArray = new string [arrayLength];
@@ -19,7 +20,7 @@ string [] CreateRandomStringArray(int elementLength, int arrayLength)
        string tmpElement = string.Empty;
        for (int j = 0; j < tmpLength; j++)
         {
-            int tmpUnicode = new Random().Next(25, 75);
+            int tmpUnicode = new Random().Next(20, 120);
             char tmpCharacter = (char) tmpUnicode;
             string tmpChar = tmpCharacter.ToString();
             tmpElement += tmpChar;
