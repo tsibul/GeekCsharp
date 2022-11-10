@@ -50,7 +50,7 @@ string [] CreateRandomStringArray(int elementLength, int arrayLength)
        for (int j = 0; j < tmpLength; j++)
         {
 //generate random number and use as unicode for random simbol            
-            int tmpUnicode = new Random().Next(50, 120);
+            int tmpUnicode = new Random().Next(60, 120);
             char tmpCharacter = (char) tmpUnicode;
             string tmpChar = tmpCharacter.ToString();
             tmpElement += tmpChar;
