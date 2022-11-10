@@ -5,16 +5,18 @@ Write("input maximum element Length: ");
 int elLength = Convert.ToInt32(ReadLine()!); 
 Write("input array Length: ");
 int arLength = Convert.ToInt32(ReadLine()!); 
+WriteLine();
 
 string [] startArray = CreateRandomStringArray(elLength, arLength);
 Write($"input array [{String.Join(", ", startArray)}]");
 
 WriteLine();
 Write("Как резать будем ? ");
-int cutLength = Convert.ToInt32(ReadLine()!); 
+int cutLength = Convert.ToInt32(ReadLine()!);
+WriteLine();
 
 string [] newArray = CutArray(startArray, cutLength);
-Write($"input array [{String.Join(", ", newArray)}]");
+Write($"result array [{String.Join(", ", newArray)}]");
 
 string [] CutArray(string [] inputArray, int cutParametr)
 {
@@ -25,7 +27,7 @@ string [] CutArray(string [] inputArray, int cutParametr)
     }
     string [] outArray = new string [j];
 
-    var j = 0;
+    j = 0;
     for (int i = 0; i < inputArray.Length; i++)    
     {
         if(inputArray[i].Length <= cutParametr)
